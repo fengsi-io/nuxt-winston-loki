@@ -1,0 +1,42 @@
+{
+  "name": "nuxt-winston-loki",
+  "version": "1.0.0",
+  "description": "grafana loki",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue .",
+    "lintfix": "eslint --fix --ext .js,.vue ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengsi-io/nuxt-winston-loki.git"
+  },
+  "keywords": [
+    "nuxtjs",
+    "grafana",
+    "loki",
+    "winston"
+  ],
+  "author": "wusongliang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengsi-io/nuxt-winston-loki/issues"
+  },
+  "homepage": "https://github.com/fengsi-io/nuxt-winston-loki#readme",
+  "dependencies": {
+    "winston": "^3.6.0",
+    "winston-loki": "^6.0.5"
+  },
+  "peerDependencies": {
+    "axios": "*"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/module-test-utils": "^1.6.3",
+    "axios": "^0.26.0",
+    "eslint": "^7.15.0",
+    "husky": "^4.3.0"
+  }
+}
