@@ -17,8 +17,11 @@
     "loki",
     "winston"
   ],
-  "author": "wusongliang",
+  "author": "pony <1655688657@qq.com>",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "bugs": {
     "url": "https://github.com/fengsi-io/nuxt-winston-loki/issues"
   },
