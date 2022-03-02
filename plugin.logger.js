@@ -6,7 +6,9 @@ export default ({ req }, inject) => {
       const host = process.client
         ? window.location.origin
         : new URL(req.headers.referer ||
-          (/http/.test(req.headers.host) ? req.headers.host : `https://${req.headers.host}`)).origin
+          (/http/.test(req.headers.host)
+            ? req.headers.host
+            : `https://${req.headers.host}`)).origin
 
       axios.post(`${host.replace(/\/$/, '')}/log`, { message, level })
     } catch (error) {
