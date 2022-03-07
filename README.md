@@ -16,8 +16,8 @@ export default {
   modules: [
     ['@fengsi-io/nuxt-winston-loki', {
       /* module options */
-      host: process.env.LOKI_HOST,
-      basicAuth: process.env.LOKI_BASIC_AUTH,
+      host: process.env.LOKI_HOST, // https://logs-prod3.grafana.net
+      basicAuth: process.env.LOKI_BASIC_AUTH, // name:password
       labels: { job: "winston" },
     }]
   ]
