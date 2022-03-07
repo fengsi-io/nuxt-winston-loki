@@ -5,12 +5,12 @@ export default ({ req }, inject) => {
     try {
       const host = process.client
         ? window.location.origin
-        : new URL(req.headers.referer ||
+        : process.middlewareHost || new URL(req.headers.referer ||
           (/http/.test(req.headers.host)
             ? req.headers.host
             : `https://${req.headers.host}`)).origin
 
-      axios.post(`${host.replace(/\/$/, '')}/log`, { message, level })
+      axios.post(`${host.replace(/\/$/, '')}/_/log`, { message, level })
     } catch (error) {
       console.error(error)
     }
