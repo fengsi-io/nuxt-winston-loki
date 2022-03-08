@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/fengsi-io/nuxt-winston-loki/compare/v1.1.0...v1.1.1) (2022-03-08)
+
+
+### Bug Fixes
+
+* 防止错误提交进入死循环 ([a60b0e4](https://github.com/fengsi-io/nuxt-winston-loki/commit/a60b0e4298b044173164676e223342a952ec5af2))
+
 ## [1.1.0](https://github.com/fengsi-io/nuxt-winston-loki/compare/v1.0.0...v1.1.0) (2022-03-07)
 
 
