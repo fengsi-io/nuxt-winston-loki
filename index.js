@@ -43,8 +43,8 @@ module.exports = function (moduleOptions) {
         })
 
         res.end()
-      } catch (err) {
-        next(err)
+      } catch (error) {
+        console.error(error)
       }
     }
   })

@@ -1,0 +1,7 @@
+.github
+.editorconfig
+.eslintrc.js
+.eslintignore
+.gitignore
+husky.config.js
+commitlint.config.js
