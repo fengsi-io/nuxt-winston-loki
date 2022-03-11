@@ -5,11 +5,9 @@ import LokiTransport from 'winston-loki'
 module.exports = function (moduleOptions) {
   const options = { host: 'http://localhost:3000', labels: { job: 'winston' } }
 
-  process.middlewareHost = moduleOptions.middlewareHost
-
   this.addPlugin({
     src: resolve(__dirname, 'plugin.logger.js'),
-    fileName: 'plugin.logger.js'
+    fileName: 'logger.client.js'
   })
 
   this.addPlugin({
@@ -44,7 +42,8 @@ module.exports = function (moduleOptions) {
 
         res.end()
       } catch (error) {
-        console.error(error)
+        console.log(error)
+        res.end()
       }
     }
   })

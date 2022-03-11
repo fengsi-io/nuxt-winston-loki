@@ -3,16 +3,9 @@ import axios from 'axios'
 export default ({ req }, inject) => {
   const logGatewayCall = (level, message) => {
     try {
-      const host = process.client
-        ? window.location.origin
-        : process.middlewareHost || new URL(req.headers.referer ||
-          (/http/.test(req.headers.host)
-            ? req.headers.host
-            : `https://${req.headers.host}`)).origin
-
-      axios.post(`${host.replace(/\/$/, '')}/_/log`, { message, level })
+      axios.post(`${window.location.origin}/_/log`, { message, level })
     } catch (error) {
-      console.error(error)
+      console.log(error)
     }
   }
 
